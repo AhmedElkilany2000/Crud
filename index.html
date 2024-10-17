@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">   
+        <div class="container">
+            <input type="text" oninput="searchProduct()" placeholder="Find what you want ....." class="form-control m-auto w-50" name="" id="searchInput">
+            <div class="row py-5" id="rowData">
+
+            </div>
+        </div> 
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Product Name</label>
+                <input type="text" class="form-control" id="productName" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Product Price</label>
+                <input type="text" class="form-control" id="productPrice">
+            </div>
+            <div class="mb-3">
+                <label for="exampleDataList" class="form-label">Product Category</label>
+                <input class="form-control" list="datalistOptions" id="productCate" placeholder="Type to search...">
+                <datalist id="datalistOptions">
+                    <option value="Tv">
+                    <option value="Mobile">
+                    <option value="Laptop">
+                    <option value="Electronic">
+                </datalist>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Descriptaion</label>
+                <input type="text" class="form-control" id="Description">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Image File</label>
+                <input type="file" class="form-control" accept="image/jpg" id="Image">
+            </div>
+            <button onclick="addProduct()"  id="addbtn" class="btn btn-primary">Add Product</button>
+            <button onclick="update()" id="updatebtn" class="btn btn-primary d-none">Update Product</button>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
